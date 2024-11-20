@@ -212,7 +212,7 @@ const LandingPage = () => {
       name: "Emily Watson",
       role: "Product Lead at GrowthCo",
       image: "/api/placeholder/100/100",
-      content: "Outstanding support team and powerful features. It's been crucial for our company's growth.",
+      content: "Outstanding support team and powerful features. It&apos;s been crucial for our company's growth.",
       rating: 5
     }
   ];

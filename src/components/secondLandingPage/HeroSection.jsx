@@ -27,7 +27,7 @@ const HeroSection = () => {
               Timeless Beauty
             </h1>
             <p className="text-xl tracking-wide mb-12 leading-relaxed max-w-xl drop-shadow">
-              Experience the essence of luxury skincare, where science meets nature's most precious elements
+              Experience the essence of luxury skincare, where science meets nature&apos;s most precious elements
             </p>
             <div className="flex gap-6">
               <button className="group px-8 py-4 bg-white text-black hover:bg-black hover:text-white transition-all duration-300 tracking-wider flex items-center gap-2">
