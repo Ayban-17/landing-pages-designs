@@ -2,6 +2,7 @@
 // components/CollectionsSection.jsx
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const CollectionsSection = () => {
   return (
@@ -15,10 +16,12 @@ const CollectionsSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="relative">
-            <img
+            <Image
               src="https://images.pexels.com/photos/5938440/pexels-photo-5938440.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Signature serum"
               className="w-full h-[700px] object-cover"
+              width={300}
+              height={300}
             />
           </div>
           <div className="max-w-lg">

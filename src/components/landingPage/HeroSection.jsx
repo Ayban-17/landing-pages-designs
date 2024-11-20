@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, Star } from 'lucide-react';
+import Image from 'next/image';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -69,10 +70,13 @@ const HeroSection = () => {
                   className="w-12 h-12 rounded-full border-4 border-white relative transition-transform hover:-translate-y-2 duration-300"
                   style={{ zIndex: avatars.length - i }}
                 >
-                  <img
+                  
+                  <Image
                     src={avatar}
                     alt={`User ${i + 1}`}
                     className="w-full h-full rounded-full object-cover"
+                    width={40}
+                    height={40}
                   />
                 </div>
               ))}

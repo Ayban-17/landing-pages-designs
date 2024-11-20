@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import { Code, Zap, Globe, Sparkles, Shield, Coffee } from 'lucide-react';
+import Image from 'next/image';
 
 const HowItWorksSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -144,13 +145,15 @@ const HowItWorksSection = () => {
               <div className="bg-white rounded-2xl overflow-hidden h-full">
                 <div className="relative h-full">
                   {allFeatures.map((feature, i) => (
-                    <img
+                    <Image
                       key={i}
                       src={feature.image}
                       alt={feature.title}
                       className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
                         activeTab === i ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
                       }`}
+                      width={300}
+                      height={300}
                     />
                   ))}
                   <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm">

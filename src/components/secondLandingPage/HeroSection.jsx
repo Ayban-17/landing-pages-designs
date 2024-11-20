@@ -2,6 +2,8 @@
 // components/HeroSection.jsx
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,10 +14,12 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-screen">
-      <img
+      <Image
         src="https://images.pexels.com/photos/3785147/pexels-photo-3785147.jpeg?auto=compress&cs=tinysrgb&w=1920"
         alt="Luxury beauty woman"
         className="w-full h-full object-cover"
+        width={300}
+        height={300}
       />
       <div className="absolute inset-0 bg-black/40">
         <div className={`max-w-7xl mx-auto px-4 h-full flex items-center transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>

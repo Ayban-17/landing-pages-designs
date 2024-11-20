@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 // components/ProductsSection.jsx
 import React from 'react';
 
@@ -33,10 +34,12 @@ const ProductsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {products.map((product, index) => (
             <div key={index} className="relative group overflow-hidden">
-              <img 
+              <Image 
                 src={product.image}
                 alt={product.name}
                 className="w-full h-[500px] object-cover transform group-hover:scale-110 transition-transform duration-700"
+                width={300}
+                height={300}
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-end p-8">
                 <div className="text-white">

@@ -21,6 +21,7 @@ import {
   Clock,
   Gift
 } from 'lucide-react';
+import Image from 'next/image';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -410,10 +411,12 @@ const LandingPage = () => {
               </div>
               <p className="text-slate-300 mb-6">{testimonial.content}</p>
               <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={testimonial.image}
                   alt={testimonial.name}
                   className="w-12 h-12 rounded-full"
+                  width={300}
+                  height={300}
                 />
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
@@ -575,7 +578,7 @@ const LandingPage = () => {
         }
       ].map((post, index) => (
         <div key={index} className="bg-slate-800/50 rounded-xl overflow-hidden hover:bg-slate-800 transition-all">
-          <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+          <Image src={post.image} alt={post.title} className="w-full h-48 object-cover" width={300} height={300}/>
           <div className="p-6">
             <div className="flex items-center gap-4 mb-4">
               <span className="text-violet-400 text-sm">{post.category}</span>

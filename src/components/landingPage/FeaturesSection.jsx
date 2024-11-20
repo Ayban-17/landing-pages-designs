@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { Zap, Shield, Globe, ArrowRight, CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const FeaturesSection = () => {
   const features = [
@@ -75,10 +76,12 @@ const FeaturesSection = () => {
             >
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={feature.image}
                   alt={feature.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  width={300}
+                  height={300}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-gray-900/0" />
                 

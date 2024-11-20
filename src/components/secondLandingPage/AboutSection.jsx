@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 // components/AboutSection.jsx
 import React from 'react';
 
@@ -36,10 +37,12 @@ const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {features.map((feature, index) => (
             <div key={index} className="text-center">
-              <img 
+              <Image 
                 src={feature.image}
                 alt={feature.title}
                 className="w-full h-96 object-cover mb-8"
+                width={300}
+                height={300}
               />
               <h3 className="text-xl font-light mb-4 tracking-wider">{feature.title}</h3>
               <p className="text-neutral-600">{feature.description}</p>

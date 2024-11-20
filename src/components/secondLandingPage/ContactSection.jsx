@@ -1,12 +1,15 @@
+import Image from "next/image";
 
 // components/Contact.jsx
 const ContactSection = () => {
     return (
       <section id="contact" className="relative h-screen">
-        <img
+        <Image
           src="https://images.pexels.com/photos/3192708/pexels-photo-3192708.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt="Luxury beauty"
           className="w-full h-full object-cover"
+          width={300}
+          height={300}
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center text-white max-w-2xl px-4">
