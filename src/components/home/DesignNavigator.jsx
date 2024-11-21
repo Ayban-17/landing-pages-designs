@@ -1,9 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Sparkles, Layout, Palette, MousePointer2, ExternalLink } from 'lucide-react';
+import { ArrowRight, Sparkles, Layout, Palette, MousePointer2, ExternalLink, Car, Zap } from 'lucide-react';
 
-// Floating shapes component with more dynamic animations
 const FloatingShape = ({ color }) => {
   const randomX = Math.random() * 100;
   const randomY = Math.random() * 100;
@@ -72,28 +71,39 @@ const DesignNavigator = () => {
       description: "Dynamic layouts with immersive animations and modern components",
       icon: Palette,
       color: "group-hover:from-[#FAD961] group-hover:via-[#F76B1C] group-hover:to-[#FF5ACD]"
+    },
+    {
+      id: 4,
+      title: "Automobile",
+      route: "/automobile",
+      description: "Sleek designs focused on automotive aesthetics and performance",
+      icon: Car,
+      color: "group-hover:from-[#FF4E50] group-hover:via-[#FC913A] group-hover:to-[#F9D423]"
+    },
+    {
+      id: 5,
+      title: "Futuristic",
+      route: "/futuristic",
+      description: "Forward-thinking designs with cutting-edge interfaces and effects",
+      icon: Zap,
+      color: "group-hover:from-[#4158D0] group-hover:via-[#C850C0] group-hover:to-[#FFCC70]"
     }
   ];
 
-  // Array of colors for floating shapes
   const shapeColors = ['purple-500', 'pink-500', 'blue-500', 'indigo-500', 'cyan-500'];
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Animated Background */}
       <div className="fixed inset-0 pointer-events-none">
-        {/* Multiple floating shapes */}
         {[...Array(15)].map((_, i) => (
           <FloatingShape key={i} color={shapeColors[i % shapeColors.length]} />
         ))}
 
-        {/* Additional glowing orbs */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full filter blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl animate-pulse" />
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-blue-500/20 rounded-full filter blur-3xl animate-pulse" />
       </div>
 
-      {/* Grid overlay */}
       <div 
         className="fixed inset-0 opacity-[0.08]"
         style={{
@@ -103,7 +113,6 @@ const DesignNavigator = () => {
         }}
       />
 
-      {/* Mouse follower */}
       <motion.div
         className="fixed w-8 h-8 rounded-full pointer-events-none z-50 mix-blend-difference"
         animate={{
@@ -116,10 +125,8 @@ const DesignNavigator = () => {
         <MousePointer2 className="w-full h-full text-white opacity-50" />
       </motion.div>
 
-      {/* Content Overlay to slightly dim the background */}
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
 
-      {/* Main content */}
       <div className="relative min-h-screen flex flex-col items-center justify-center px-6 py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -158,13 +165,11 @@ const DesignNavigator = () => {
                   onMouseEnter={() => setHoveredDesign(design.id)}
                   onMouseLeave={() => setHoveredDesign(null)}
                 >
-                  {/* Gradient overlay */}
                   <div className={`
                     absolute inset-0 opacity-0 group-hover:opacity-70
                     transition-opacity duration-500 bg-gradient-to-br ${design.color}
                   `} />
 
-                  {/* Content */}
                   <div className="relative z-10">
                     <motion.div
                       animate={{
@@ -209,7 +214,6 @@ const DesignNavigator = () => {
           </AnimatePresence>
         </div>
 
-        {/* Ayban Trademark */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
