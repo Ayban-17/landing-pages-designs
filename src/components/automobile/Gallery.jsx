@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -79,9 +80,11 @@ const Gallery = () => {
         >
           <X className="w-8 h-8" />
         </button>
-        <img 
+        <Image 
           src={image.src} 
           alt={image.title}
+          width={300}
+          height={300}
           className="w-full h-auto rounded-lg"
         />
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
@@ -155,13 +158,15 @@ const Gallery = () => {
                 className="aspect-square relative group cursor-pointer overflow-hidden rounded-lg"
                 onClick={() => setSelectedImage(image)}
               >
-                <motion.img
-                  src={image.src}
-                  alt={image.title}
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.4 }}
-                />
+                <motion.div className="relative">
+                  <Image
+                    src={image.src}
+                    alt={image.title}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"
                   initial={false}

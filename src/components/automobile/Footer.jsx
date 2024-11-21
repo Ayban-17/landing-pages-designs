@@ -55,7 +55,7 @@ const Footer = () => {
                 <span className="text-white"> BUMPER</span>
               </h2>
               <p className="text-gray-400 max-w-sm">
-                Transform your ride with premium modifications and professional installations. Metro Manila's trusted car aesthetic specialist.
+                Transform your ride with premium modifications and professional installations. Metro Manila&apos;s trusted car aesthetic specialist.
               </p>
               <div className="flex space-x-4">
                 {[Facebook, Instagram, Twitter, Youtube].map((Icon, index) => (

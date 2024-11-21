@@ -45,7 +45,7 @@ const CTA = () => {
                 transition={{ delay: 0.2 }}
                 className="text-4xl md:text-6xl font-bold text-white"
               >
-                Let's Make Your Car 
+                Let&apos;s Make Your Car 
                 <span className="text-red-500"> Stand Out</span>
               </motion.h2>
 
@@ -55,7 +55,7 @@ const CTA = () => {
                 transition={{ delay: 0.3 }}
                 className="text-gray-400 text-lg"
               >
-                Book a consultation with our expert team and start your car's transformation journey today.
+                Book a consultation with our expert team and start your car&apos;s transformation journey today.
               </motion.p>
             </div>
 

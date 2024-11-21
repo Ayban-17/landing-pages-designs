@@ -25,7 +25,7 @@ const FAQ = () => {
     {
       Icon: Clock,
       question: "How long does a typical modification take?",
-      answer: "Project timelines vary depending on complexity. Basic installations take 2-3 days, while full custom builds may take 2-4 weeks. We'll provide a detailed timeline during consultation."
+      answer: "Project timelines vary depending on complexity. Basic installations take 2-3 days, while full custom builds may take 2-4 weeks. We&apos;ll provide a detailed timeline during consultation."
     },
     {
       Icon: Shield,
@@ -213,7 +213,7 @@ const FAQ = () => {
           className="mt-12 text-center bg-gradient-to-r from-neutral-900/50 to-neutral-800/50 p-8 rounded-2xl border border-neutral-800/50 backdrop-blur-sm"
         >
           <h3 className="text-xl text-white mb-4">Still have questions?</h3>
-          <p className="text-gray-400 mb-6">We're here to help with any other questions you might have</p>
+          <p className="text-gray-400 mb-6">We&apos;re here to help with any other questions you might have</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, User, ChevronRight, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Blog = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -123,11 +124,12 @@ const Blog = () => {
               className="bg-neutral-900/50 rounded-2xl overflow-hidden backdrop-blur-sm border border-neutral-800/50 group"
             >
               {/* Image Container */}
-              <div className="h-48 overflow-hidden relative">
-                <motion.img
-                  variants={imageVariants}
+              <div className="relative aspect-video overflow-hidden">
+                <Image
                   src={post.image}
                   alt={post.title}
+                  width={300}
+                  height={300}
                   className="w-full h-full object-cover"
                 />
                 <motion.div

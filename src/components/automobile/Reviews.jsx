@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import Image from 'next/image';
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -120,9 +121,11 @@ const Reviews = () => {
                     className="w-24 h-24 rounded-full overflow-hidden"
                     whileHover={{ scale: 1.1 }}
                   >
-                    <img 
+                    <Image 
                       src={reviews[currentIndex].image} 
                       alt={reviews[currentIndex].name}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -135,7 +138,7 @@ const Reviews = () => {
                     </div>
 
                     <p className="text-white text-lg md:text-xl mb-6">
-                      "{reviews[currentIndex].comment}"
+                    &quot;{reviews[currentIndex].comment}&quot;
                     </p>
 
                     <div className="space-y-2">

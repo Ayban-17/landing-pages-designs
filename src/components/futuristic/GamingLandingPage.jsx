@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Star, Users, ChevronDown, Trophy, Swords, Activity, Gamepad2, Headphones, Monitor, Twitch, Youtube, Clock, Zap } from 'lucide-react';
 import GameCategories from "./GameCategories"
 import ActiveTournaments from "./ActiveTournaments"
+import Image from 'next/image';
 
 const GamingLandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -104,9 +105,11 @@ const GamingLandingPage = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50 mix-blend-overlay" />
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1920" 
             alt="Gaming Setup"
+            width={300}
+            height={300}
             className="w-full h-full object-cover"
           />
         </div>
@@ -143,9 +146,11 @@ const GamingLandingPage = () => {
           
           <div className="relative">
             <div className="rounded-2xl overflow-hidden">
-              <img 
+              <Image 
                 src={featuredGames[activeGameIndex].image}
                 alt={featuredGames[activeGameIndex].title}
+                width={300}
+                height={300}
                 className="w-full aspect-video object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -260,9 +265,11 @@ const GamingLandingPage = () => {
             {streamers.map((streamer, idx) => (
               <div key={idx} className="bg-white/5 backdrop-blur-lg rounded-xl overflow-hidden group hover:scale-105 transition-transform">
                 <div className="relative">
-                  <img 
+                  <Image 
                     src={streamer.image}
                     alt={streamer.name}
+                    width={300}
+                    height={300}
                     className="w-full aspect-video object-cover"
                   />
                   <div className="absolute top-4 right-4">
@@ -318,9 +325,11 @@ const GamingLandingPage = () => {
             </div>
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-xl rounded-xl" />
-              <img 
+              <Image 
                 src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?q=80&w=1920" 
                 alt="Gaming Setup"
+                width={300}
+                height={300}
                 className="relative rounded-xl w-full h-full object-cover"
               />
             </div>
